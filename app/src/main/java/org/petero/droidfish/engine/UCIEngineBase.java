@@ -141,7 +141,7 @@ public abstract class UCIEngineBase implements UCIEngine {
     /** Return true if the UCI option can be changed by the user. */
     protected boolean configurableOption(String name) {
         name = name.toLowerCase(Locale.US);
-        if (name.startsWith("uci_") || name.equals("hash") || name.equals("ponder") ||
+        if (/*name.startsWith("uci_") ||*/ name.equals("hash") || name.equals("ponder") ||
             name.equals("multipv") || name.equals("gaviotatbpath") ||
             name.equals("syzygypath"))
             return false;
