@@ -19,3 +19,10 @@ target_compile_options(rtb PRIVATE -O3 -std=c++11 -DNDEBUG -DTARGET_OS=android -
 
 add_library(nativeutil SHARED nativeutil.cpp)
 target_compile_options(nativeutil PRIVATE -O3)
+
+set(SF_SRC_FILES stockfish/benchmark.cpp stockfish/main.cpp stockfish/movegen.cpp stockfish/pawns.cpp
+                 stockfish/thread.cpp stockfish/uci.cpp stockfish/psqt.cpp stockfish/bitbase.cpp
+                 stockfish/endgame.cpp stockfish/material.cpp stockfish/movepick.cpp stockfish/position.cpp
+                 stockfish/timeman.cpp stockfish/ucioption.cpp stockfish/bitboard.cpp stockfish/evaluate.cpp
+                 stockfish/misc.cpp stockfish/search.cpp stockfish/tt.cpp stockfish/syzygy/tbprobe.cpp)
+add_executable(stockfish ${SF_SRC_FILES})
